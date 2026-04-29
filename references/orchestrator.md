@@ -1,4 +1,4 @@
-# AKA Wireframe WordPress Orchestrator
+# AKA SEO Wireframe Orchestrator
 
 ## Purpose
 Master coordinator for building complete Authority-Knowledge-Answer content architectures. Guides users through the entire workflow from setup to deployment.
@@ -18,7 +18,7 @@ claude-opus-4
 - Strategy planning coordination
 - Content generation orchestration
 - Internal linking coordination
-- WordPress deployment management
+- Content deployment management (any CMS)
 - Progress tracking and reporting
 - Error handling and recovery
 
@@ -29,7 +29,7 @@ claude-opus-4
 2. **Strategy**: Generate complete AKA wireframe
 3. **Generate**: Create all content with link placeholders
 4. **Link**: Convert placeholders and add contextual links
-5. **Deploy**: Push to WordPress with proper hierarchy
+5. **Deploy**: Deploy to your CMS with proper hierarchy
 6. **Optimize**: SEO validation and improvements
 
 ### Step-by-Step Mode
@@ -91,7 +91,7 @@ Calls `aka-internal-linker` droid to:
 **Output**: Updated content files with working links
 
 ### deploy
-Calls `aka-wordpress-deployer` droid to:
+Hand off to your CMS deployment process:
 - Install/activate AKA Framework Theme
 - Create pages with proper parent-child hierarchy
 - Set up navigation menus
@@ -102,7 +102,7 @@ Calls `aka-wordpress-deployer` droid to:
 **Options**:
 - `--hub N` - Deploy specific hub
 - `--all` - Deploy entire site
-- `--url` - WordPress site URL
+- `--url` - Site URL
 - `--dry-run` - Preview without deploying
 
 ### status
@@ -121,7 +121,7 @@ Full automation mode. Runs:
 2. Check if strategy exists (if not, generate)
 3. Generate content for specified hub(s)
 4. Process internal links
-5. Deploy to WordPress
+5. Deploy to your CMS
 
 **Options**:
 - `--hub N` - Automate specific hub (15 min)
@@ -196,7 +196,7 @@ npx aka-wireframe-wp auto --hub 1
 2. Checks strategy → ✓ Exists
 3. Calls content-generator for hub 1 → 41 pages created
 4. Calls internal-linker for hub 1 → 247 links added
-5. Calls wordpress-deployer for hub 1 → Deployed successfully
+5. Deploy hub 1 → Deployed successfully
 
 # Result: Complete hub live in ~15 minutes
 ```
@@ -236,10 +236,10 @@ Input: Generated content + aka-strategy-output.json
 Output: Content files with working HTML links
 ```
 
-**Calls to wordpress-deployer**:
+**Deployment calls**:
 ```
-Input: Linked content + WordPress credentials
-Output: Live WordPress site with all pages
+Input: Linked content + CMS credentials
+Output: Live site with all pages
 ```
 
 ## Success Metrics

@@ -184,7 +184,7 @@ Create complete URL hierarchy:
 
 **Pattern**: `domain.com/[hub-slug]/[page-slug]/`
 
-**WordPress Hierarchy**:
+**Site Hierarchy**:
 - Authority Hub = Parent page
 - Knowledge Pages = Children of hub
 - Answer Pages = Children of hub

@@ -1,13 +1,14 @@
 ---
-name: aka-wireframe-wp
-description: Build complete WordPress authority sites (200+ pages) using the Authority-Knowledge-Answer (AKA) content framework. Use when the user wants to create large-scale WordPress sites with topical clustering, programmatic content generation, SEO optimization, or mentions "AKA framework", "authority site", "topical authority", "content hub", "pillar content", "200 page site", or "wireframe WordPress".
+name: aka-seo-wireframe
+version: 2.0.0
+description: A 3-tier topical content framework (Authority → Knowledge → Answer) for building authority sites that rank on both Google and AI-powered search (ChatGPT, Claude, Perplexity, AI Overviews). Use when planning content structure for any niche, generating pillar content strategies, scaling SEO content with topical clustering, or building authority sites at 100+ pages.
 ---
 
-# AKA Wireframe WordPress
+# AKA SEO Wireframe
 
-Build complete WordPress authority sites automatically using the Authority-Knowledge-Answer (AKA) content framework. Generate 200+ page sites with proper topical clustering, internal linking, and SEO optimization.
+A 3-tier content architecture that mirrors how both Google AND large language models build their understanding of a topic. Designed for authority sites at scale (50-330+ pages).
 
-**Generate in 1-2 hours what typically takes 4-6 weeks manually.**
+**Generate in hours what typically takes weeks of manual planning.**
 
 ## The AKA Framework
 
@@ -27,123 +28,158 @@ Authority Pages (5-7 hubs)
     └── Featured snippet optimized
 ```
 
-## Output Per Hub (~20 minutes)
+## Output Per Hub
 - 1 Authority page (4,000 words)
-- 15 Knowledge pages (30,000 words)
-- 25 Answer pages (25,000 words)
+- 15 Knowledge pages (30,000 words total)
+- 25 Answer pages (25,000 words total)
 - 300+ internal links
-- Complete SEO optimization
+- Complete topical clustering
 
-## Full Site (5 hubs, 1-2 hours)
+## Full Site (5 hubs)
 - 5 Authority hubs
 - 75 Knowledge pages
 - 125 Answer pages
 - **205 total pages**
 - 1,500+ internal links
 
-## Quick Start Workflow
+## Why Both Google AND LLMs Reward This
 
-### Step 1: Setup (5 min)
-Collect 15 business variables:
+### Google
+- **Topical Authority** — hub-and-spoke is exactly what the algorithm rewards
+- **EEAT signals** — Authority hubs establish trust, Knowledge demonstrates expertise
+- **Helpful Content** — comprehensive + deep + connected (post-2024 update)
+
+### LLMs (ChatGPT, Claude, Perplexity, AI Overviews)
+- **Authority pages** = "this site is THE expert on X" signal
+- **Knowledge pages** = depth signal — site doesn't just mention, it understands
+- **Answer pages** = direct match to AI-generated answer formats
+
+When LLMs crawl AKA-structured content, they map it as a comprehensive resource and cite it instead of skipping it.
+
+## Implementation Workflow
+
+### Step 1: Setup — Collect Project Variables
+
+Gather these 15 inputs before starting:
+
 1. Business name
-2. Industry
-3. Location (City, State)
+2. Industry / niche
+3. Location (City, State / Region)
 4. Service radius
 5. Primary service (→ first Authority Hub)
-6. Secondary services (→ more Authority Hubs)
+6. Secondary services (→ additional Authority Hubs)
 7. Target audience
-8. Top 3 pain points
+8. Top 3 customer pain points
 9. Brand voice
 10. Unique value proposition
 11. Phone number
 12. Email
 13. Business address
 14. Hours of operation
-15. Trust signals (years, clients, awards)
+15. Trust signals (years in business, clients served, certifications, awards)
 
-Save to: `.factory/config/aka-wireframe/business-config.json`
+### Step 2: Generate the AKA Strategy
 
-### Step 2: Generate Strategy (2 min)
-Create complete AKA wireframe:
-- 5-7 Authority Hub topics
-- 12-15 Knowledge pages per hub
-- 20-30 Answer questions per hub
-- Complete URL structure
-- Keyword mapping
+Create the complete wireframe based on the inputs:
 
-Save to: `.factory/config/aka-wireframe/aka-strategy-output.json`
+- 5-7 Authority Hub topics derived from the primary + secondary services
+- 12-15 Knowledge page topics per hub (deep-dives on specific aspects)
+- 20-30 Answer page topics per hub (long-tail questions, FAQs)
+- Complete URL structure mapping
+- Keyword mapping per page (head, mid-tail, long-tail)
 
-### Step 3: Generate Content (8 min/hub)
-Create all content with variable injection:
-- Authority page (4,000 words)
-- Knowledge pages (15 × 2,000 words)
-- Answer pages (25 × 1,000 words)
-- Add `[LINK:slug|anchor]` placeholders
+See `references/strategy-planner.md` for detailed strategy generation.
 
-Save to: `generated-content/hub-N/`
+### Step 3: Generate the Content
 
-### Step 4: Process Internal Links (2 min/hub)
-- Convert `[LINK:...]` placeholders to URLs
-- Add AI contextual links
-- Validate AKA structure
-- No broken links, no orphans
+Create all content with variable injection so brand details auto-populate:
 
-### Step 5: Deploy to WordPress (3 min/hub)
-- Create pages with hierarchy
-- Set parent-child relationships
-- Add SEO metadata
-- Insert schema markup
-- Create navigation menus
+- Authority pages (4,000 words each, comprehensive coverage of the hub topic)
+- Knowledge pages (2,000 words each, focused deep-dive on a specific subtopic)
+- Answer pages (1,000 words each, FAQ format optimized for featured snippets)
+- Add internal link placeholders that get resolved in the next step
+
+See `references/content-generator.md` for content generation patterns.
+See `references/prompts-library.md` for tested prompt templates.
+
+### Step 4: Build the Internal Linking Structure
+
+Convert link placeholders into the actual hub-and-spoke structure:
+
+- Authority hubs link to all their Knowledge and Answer pages
+- Knowledge pages link to their parent Authority and to related Knowledge pages
+- Answer pages link to their parent Authority and to relevant Knowledge pages
+- 1,500+ contextual internal links at the full site scale
+
+### Step 5: SEO Optimization Pass
+
+Final QA on the content set:
+
+- Unique meta titles and descriptions per page
+- Schema markup recommendations (LocalBusiness, Service, FAQ)
+- No duplicate H1s across the site
+- Canonical tags
+- Image alt text
+- Heading hierarchy
+
+See `references/seo-optimizer.md` for the QA checklist.
 
 ## Reference Files
 
-For detailed implementation, load these references as needed:
+- `references/strategy-planner.md` — How to derive hubs and pages from business inputs
+- `references/content-generator.md` — Content generation patterns per page type
+- `references/prompts-library.md` — Tested prompt templates for each page type
+- `references/seo-optimizer.md` — Final QA checklist
+- `references/orchestrator.md` — How to sequence all the steps end-to-end
 
-| Reference | When to Load |
-|-----------|--------------|
-| `references/orchestrator.md` | Coordinating full workflow |
-| `references/strategy-planner.md` | Generating AKA strategy |
-| `references/content-generator.md` | Creating page content |
-| `references/internal-linker.md` | Processing links |
-| `references/wordpress-deployer.md` | Deploying to WordPress |
-| `references/seo-optimizer.md` | SEO auditing |
+## Variables Used
 
-## Industry Applications
+All content generation uses these placeholders that get replaced with the project values:
 
-Works for any vertical:
-- **Law Firms**: Personal injury, family law, criminal defense
-- **Financial Services**: Title loans, mortgages, insurance
-- **Home Services**: HVAC, plumbing, roofing, landscaping
-- **Healthcare**: Medical practices, dental, chiropractic
-- **Professional Services**: Consulting, real estate, agencies
+- `{{BUSINESS_NAME}}`
+- `{{LOCATION}}` or `{{CITY}}, {{STATE}}`
+- `{{INDUSTRY}}`
+- `{{PRIMARY_SERVICE}}`
+- `{{PHONE}}`
+- `{{EMAIL}}`
+- `{{HOURS}}`
+- `{{UNIQUE_VALUE}}`
+- `{{PAIN_POINT_1}}`, `{{PAIN_POINT_2}}`, `{{PAIN_POINT_3}}`
+- `{{BRAND_VOICE}}`
+- `{{TRUST_SIGNALS}}`
 
-## Content Structure Example
+## Quality Standards
 
-**HVAC Company - Hub 1: AC Repair**
+Every Authority page must have:
+- A strong, opinionated thesis (not generic listicle content)
+- Clear topical authority signals (define terms, address misconceptions)
+- Internal links to all child Knowledge and Answer pages
+- EEAT-aligned content (real expertise, not surface-level)
 
-```
-ac-repair-services/ (Authority - 4,000 words)
-├── ac-not-cooling/ (Knowledge)
-├── ac-making-noise/ (Knowledge)
-├── ac-refrigerant-leak/ (Knowledge)
-├── ...15 Knowledge pages
-├── how-much-ac-repair-cost/ (Answer)
-├── why-ac-blowing-warm-air/ (Answer)
-├── when-replace-vs-repair-ac/ (Answer)
-└── ...25 Answer pages
-```
+Every Knowledge page must have:
+- Genuine depth on its specific subtopic (no filler)
+- Original framing or insight (not a summary of other articles)
+- Internal links to parent Authority + 2-3 related Knowledge pages
+- Practical application or examples
 
-## Key Principles
+Every Answer page must have:
+- A direct answer in the first 2 sentences (featured snippet optimization)
+- Question framed exactly as people search it
+- Internal links back to parent Authority + 1-2 relevant Knowledge pages
+- Concise and scannable
 
-1. **Variable Injection**: All content uses `{{BUSINESS_NAME}}`, `{{LOCATION}}`, etc.
-2. **Two-Phase Linking**: Placeholders first, then conversion + AI contextual links
-3. **SEO-First**: Every page has title, meta, schema, keywords mapped
-4. **Hierarchy**: Proper parent-child relationships for Google
-5. **No Orphans**: Every page linked from multiple sources
+## What This Framework Is NOT
 
-## WordPress Requirements
+- Not a templating system that swaps variables — content must have genuine depth per page
+- Not "wide and shallow" SEO from the 2020 era — Google now demotes that
+- Not platform-specific — works for any CMS, static site, or custom build
+- Not a substitute for real expertise — it's a structure for organizing real expertise at scale
 
-- WordPress REST API enabled
-- Application passwords or admin credentials
-- Permalinks set to `/%postname%/`
-- AKA Framework Theme (included in assets)
+## How to Use This Framework
+
+This is platform-agnostic. Use it however fits your workflow:
+
+- Paste this SKILL.md as a system prompt in any AI tool (ChatGPT, Claude, Gemini, Perplexity)
+- Use it as a methodology document for human content teams
+- Reference it when briefing freelance writers
+- Adapt the variable structure to your CMS

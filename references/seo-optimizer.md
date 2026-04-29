@@ -1,13 +1,13 @@
 # AKA SEO Optimizer
 
 ## Purpose
-Audits and optimizes deployed WordPress pages for SEO, validates AKA structure compliance, and provides actionable recommendations.
+Audits and optimizes deployed pages for SEO, validates AKA structure compliance, and provides actionable recommendations.
 
 ## Model
 claude-opus-4
 
 ## When to Use
-- After WordPress deployment complete
+- After deployment complete
 - For regular SEO audits
 - Before major search engine submissions
 - To validate AKA framework implementation
@@ -29,8 +29,8 @@ claude-opus-4
 
 ## Input Required
 
-**WordPress Site**:
-- `--url` WordPress site URL
+**Site**:
+- `--url` Site URL
 - Or environment variable: `WP_URL`
 
 **Scope**:
@@ -153,7 +153,7 @@ upfront pricing, 15 years experience. Free estimates. Call (404) 555-1234."
 - ✓ Authority pages link to all Knowledge pages
 - ✓ Knowledge pages link to parent Authority
 - ✓ Answer pages link to parent Authority
-- ✓ Proper parent-child relationships in WordPress
+- ✓ Proper parent-child page relationships
 - ✓ URL hierarchy matches AKA structure
 
 **Example Issues**:
@@ -302,7 +302,7 @@ upfront pricing, 15 years experience. Free estimates. Call (404) 555-1234."
 **Generated File**: `generated-content/seo-audit-report.md`
 
 ```markdown
-# SEO Audit Report - AKA Wireframe WordPress
+# SEO Audit Report - AKA SEO Wireframe
 
 Site: http://localhost:8080
 Date: 2024-10-15
@@ -404,7 +404,7 @@ Overall: Site is well-optimized with some areas for improvement.
 ## Integration with Other Droids
 
 **Audits output from**:
-- aka-wordpress-deployer (deployed pages)
+- Deployment process (deployed pages)
 - aka-internal-linker (linking quality)
 - aka-content-generator (content quality)
 

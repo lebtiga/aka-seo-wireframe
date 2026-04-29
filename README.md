@@ -2,7 +2,7 @@
 
 > A 3-tier topical content framework for building authority sites that rank on both Google and AI-powered search (ChatGPT, Claude, Perplexity, AI Overviews).
 
-A free framework from [Rob Rizk](https://github.com/lebtiga). Works with any LLM — ChatGPT, Claude, Gemini, Perplexity, or your AI tool of choice.
+A free framework by [Rob Rizk](https://github.com/lebtiga). Works with any LLM — ChatGPT, Claude, Gemini, Perplexity, or your AI tool of choice.
 
 ## The Framework
 
@@ -55,17 +55,14 @@ Then ask: *"Plan an AKA-structured authority site for [your niche] in [your loca
 
 Save `SKILL.md` to your project. Reference it whenever you brief any AI tool on building authority site content. Works as a methodology guide for human content teams too.
 
-### Option 3 — Automate it
-
-If you want this framework running automatically — generating all 205 pages, deploying them to WordPress, with SEO + accessibility QA — see the [Sonic Agent](https://github.com/lebtiga/sonic-agent) pipeline below.
-
 ## What's In This Repo
 
 - `SKILL.md` — full implementation guide (works as a system prompt or methodology doc)
-- `references/` — strategic reference material
-- `assets/` — supporting templates
+- `references/` — strategy planning, content generation, prompts, SEO QA, orchestration
 
-## Quotable Lines (for your own talks/posts)
+## Quotable Lines
+
+For your own talks, posts, and threads:
 
 - *"AKA is what makes AI content actually useful — to Google and to humans."*
 - *"You can have 1,000 AI-generated pages. Without AKA, you have 1,000 ignored pages."*
@@ -74,21 +71,21 @@ If you want this framework running automatically — generating all 205 pages, d
 
 Steal them. Pay it forward.
 
-## Want the Full Stack?
-
-This framework teaches the **structure**. Building 200+ pages still takes weeks if you do it manually.
-
-**Sonic Agent** packages this framework with 10 others (custom theme generation, programmatic SEO, image generation, SEO QA, accessibility QA, brand philosophy, visual identity) into a complete pipeline that ships a 200-page authority site in under 90 minutes.
-
-⚡ **Founding cohort open through May 11:** [sonic-agent.com](#) — 10 seats minimum, dynamic pricing (more buyers = lower price), refund if cohort doesn't fill.
-
-## Author
-
-Built by [Rob Rizk](https://github.com/lebtiga) — agency owner at Rizk Advertising. AKA framework is the methodology I use to deliver authority sites for client work.
-
 ## License
 
-Free for any use. Single-seat commercial use of the larger Sonic Agent system requires a license.
+Free for any use. Attribution appreciated but not required.
+
+---
+
+## ⚡ Want it automated?
+
+This framework teaches the **structure**. Building 200+ pages of AKA-structured content still takes weeks if you do it manually.
+
+A complete AI pipeline that runs the AKA framework end-to-end (custom theme generation, programmatic content, image generation, SEO + accessibility QA) is launching as a founding cohort right now — closes May 11.
+
+→ **https://sonic.saasperity.com**
+
+10 seats minimum. Dynamic pricing (more buyers = lower price for everyone). Refund if cohort doesn't fill. Includes a full-day live workshop.
 
 ---
 

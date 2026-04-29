@@ -500,94 +500,10 @@ Generate appropriate schema markup for this page.
 
 ---
 
-## Code Generation Prompts
-
-### 13. WordPress Custom Page Template
-
-```
-Generate a WordPress custom page template.
-
-**Template For**: [PAGE_TYPE] (Authority/Knowledge/Answer)
-**Features Needed**:
-- [LIST_FEATURES]
-
-**Generate Complete PHP Template** including:
-
-1. **Template Header**:
-   - Template Name comment
-   - get_header() call
-
-2. **Custom Loop**:
-   - Page content display
-   - Custom fields integration
-   - Dynamic content sections
-
-3. **Sidebar** (if applicable):
-   - Related posts widget
-   - CTA widget
-   - Navigation widget
-
-4. **Schema Markup**:
-   - Proper JSON-LD
-   - Dynamic data from WordPress
-
-5. **Footer**:
-   - get_footer() call
-
-**Custom Fields** (if needed):
-- [LIST_CUSTOM_FIELDS]
-
-**CSS Classes** to use:
-- [LIST_CLASSES]
-
-**Output**: Complete, ready-to-use PHP template file with comments.
-```
-
-### 14. Content Import Script
-
-```
-Generate a PHP script to bulk import content to WordPress.
-
-**Import Requirements**:
-- Content source: [JSON / CSV / Array]
-- Number of pages: [COUNT]
-- Page type: [TYPE]
-- Parent page: [IF_APPLICABLE]
-
-**Script Should**:
-
-1. **Read Content** from [SOURCE_TYPE]
-2. **Create Posts** with:
-   - post_title
-   - post_content
-   - post_status (publish/draft)
-   - post_type
-   - post_parent (if hierarchical)
-
-3. **Set Metadata**:
-   - Custom fields
-   - Featured image
-   - Categories/tags
-   - Template assignment
-
-4. **Handle Errors**:
-   - Duplicate checking
-   - Error logging
-   - Success confirmation
-
-5. **Progress Display**:
-   - Count of imported
-   - Failures reported
-   - Time elapsed
-
-**Output**: Complete PHP script with usage instructions.
-```
-
----
 
 ## Internal Linking Prompts
 
-### 15. Contextual Link Opportunity Finder
+### 13. Contextual Link Opportunity Finder
 
 ```
 Find internal linking opportunities in this content.
@@ -629,7 +545,7 @@ Target: [Page Title] - [URL]
 Value: [Why this helps the reader]
 ```
 
-### 16. Hub-to-Hub Cross-Linking Strategy
+### 14. Hub-to-Hub Cross-Linking Strategy
 
 ```
 Create cross-linking strategy between my Authority Hubs.
@@ -669,7 +585,7 @@ Create cross-linking strategy between my Authority Hubs.
 
 ## Conversion Optimization Prompts
 
-### 17. CTA Copy Generator
+### 15. CTA Copy Generator
 
 ```
 Generate high-converting CTA copy for my pages.
@@ -710,7 +626,7 @@ Generate high-converting CTA copy for my pages.
 Provide A/B testing recommendations.
 ```
 
-### 18. Lead Magnet Content Creator
+### 16. Lead Magnet Content Creator
 
 ```
 Create a lead magnet to generate email subscribers.
@@ -757,7 +673,7 @@ Create a lead magnet to generate email subscribers.
 
 ## Advanced Prompts
 
-### 19. Content Refresh Strategy
+### 17. Content Refresh Strategy
 
 ```
 Create a content refresh strategy for existing pages.
@@ -795,7 +711,7 @@ Create a content refresh strategy for existing pages.
 **Generate Monthly Refresh Schedule** for next 6 months.
 ```
 
-### 20. Voice Search Optimization
+### 18. Voice Search Optimization
 
 ```
 Optimize content for voice search and featured snippets.
